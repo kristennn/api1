@@ -12,6 +12,10 @@ Rails.application.routes.draw do
       delete "/reservations/:booking_code" => "reservations#destroy", :as => :cancel_reservation
 
       get "/reservations" => "reservations#index", :as => :reservations
+
+      post "/signup" => "auth#signup"
+      post "/login" => "auth#login"
+      post "/logout" => "auth#logout"
     end
   end
 end
